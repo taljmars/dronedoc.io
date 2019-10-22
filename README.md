@@ -1,9 +1,13 @@
-# Mediumish - Jekyll Theme
+# Link
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
+For more details, use the bootstrap creator
+https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
-
+# Work locally
+1. cd to the directory
+2. bundle
+3. jekyll serve --watch (to check that everything works localy)
+4. push back to the branch
 
 ### Copyright
 
@@ -15,9 +19,6 @@ Copyright (C) 2019 Sal, https://www.wowthemes.net
 
 ### Contribute
 
-1. [Fork the repo](https://github.com/wowthemesnet/mediumish-theme-jekyll).
-2. Clone a copy of your fork on your local
-3. Create a branch off of master and give it a meaningful name (e.g. my-new-mediumish-feature).
-4. Make necessary changes, commit, push and open a pull request on GitHub.
+e-mail: taljmars@gmail.com
 
 Thank you!

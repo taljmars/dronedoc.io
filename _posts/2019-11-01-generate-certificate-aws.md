@@ -4,9 +4,9 @@ title:  "Generate Trusted Certificate on AWS AMI"
 author: tal
 categories: [ dev ]
 tags: [ami, amazon, certificate]
-image: assets/images/19.jpg
+image: assets/images/20.jpg
 description: "This is the ground control station for the drone, this one contain the GUI logic (based on JFX2). This clients communicate with the drone server to get and store data. It is also work with the map viewer project to get map access, image processing project to have FPV and generic tools to get access to USB devices."
-featured: true
+featured: false
 hidden: false
 rating: 4.5
 ---

@@ -15,17 +15,10 @@ The following directory hold the DroneGCS project files for the GUI and Controll
 
 If you are a user who wishes to fly you drone and enjoy this fully featured Ground Control Station, simple download the relevant files from <a href="https://github.com/taljmars/DroneGCS/tree/master/ClientInstallation">here</a>, Run Deploy.bat and enjoy your newly GCS, this client require an internet connection. In case you wish to use local server (For having better performance and offline flight, download DroneServer as <a href="https://github.com/taljmars/DroneServer/tree/master/ServerInstallation">well</a> and follow it installation guidelines) Last but not least, in case you wish to install a standalone version which include both client and server in a single installer please refere to <a href="https://github.com/taljmars/StandaloneDroneGCS">this</a> repository
 
-#### How to use?
-
-Dowload and install, choose if to work offline or not.
-
-#### Resources
-- The project is based on Spring framework (4.3.3), a good info about the release can be found in this <a href="http://repo.spring.io/release/org/springframework/spring/4.3.3.RELEASE/">link</a>
-- The map resource and main code section are being supported using JMapViewer project of OSM (<a href="http://wiki.openstreetmap.org/wiki/JMapViewer">OpenStreetMap</a>)
-
-Install Python:
+#### Install Python
 $ yum install python27-devel git
-Create a file for nginx:
+
+#### Create a file for nginx
 $ touch /etc/nginx/conf.d/myplayground.us-east-2.elasticbeanstalk.com.conf
 Then, add the following content to the file:
 
@@ -36,16 +29,20 @@ server {
         proxy_pass https://127.0.0.1:4000;
     }
 }
+
+#### Install Let's Encrypt
 Install Let’s Encrypt by cloning the github repository into /opt/letsencrypt and running the Let’s Encrypt installer:
 $ git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 $ /opt/letsencrypt/letsencrypt-auto --debug
-Restart nginx
+
+#### Restart nginx
 $ killall nginx
 $ /usr/sbin/nginx -c /etc/nginx/nginx.conf
 In the above example the server address is: myplayground.us-east-2.elasticbeanstalk.com And there is an internal process that works listen to port 4000.
 
-Certification Renewal
+#### Certification Renewal
 $ /opt/letsencrypt/letsencrypt-auto certonly --debug --webroot -w /var/www/playground -d myplayground.us-east-2.elasticbeanstalk.com -d www.myplayground.us-east-2.elasticbeanstalk.com --config /etc/letsencrypt/config.ini --agree-tos
+
 Or
 
 $ ./certbot-auto renew -v --debug

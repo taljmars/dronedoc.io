@@ -14,7 +14,7 @@ rating: 4.5
 In this article, we will install the free SSL certificate on your site which is running on Amazon AMI.
 I’m assuming that you are running NGINX on an Amazon Linux EC2 instance. We’ll install a free SSL certificate from Let’s Encrypt.
 
-Let’s Encrypt is a free, automated, and open certificate authority (CA), run for the public’s benefit. It is a service provided by the Internet Security Research Group (ISRG). It give people the digital certificates they need in order to enable HTTPS (SSL/TLS) for websites, for free, in the most user-friendly way we can. We do this because we want to create a more secure and privacy-respecting Web.
+Let’s Encrypt is a free, automated, and open certificate authority (CA), run for the public’s benefit. It is a service provided by the Internet Security Research Group (ISRG). It give people the digital certificates they need in order to enable HTTPS (SSL/TLS) for websites, for free, in the most user-friendly way possible.
 
 #### Basic Requirements
 First SSH to your AMI server, than, install Python

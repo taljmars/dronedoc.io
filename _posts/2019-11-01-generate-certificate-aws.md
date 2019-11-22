@@ -23,3 +23,30 @@ Dowload and install, choose if to work offline or not.
 - The project is based on Spring framework (4.3.3), a good info about the release can be found in this <a href="http://repo.spring.io/release/org/springframework/spring/4.3.3.RELEASE/">link</a>
 - The map resource and main code section are being supported using JMapViewer project of OSM (<a href="http://wiki.openstreetmap.org/wiki/JMapViewer">OpenStreetMap</a>)
 
+Install Python:
+$ yum install python27-devel git
+Create a file for nginx:
+$ touch /etc/nginx/conf.d/myplayground.us-east-2.elasticbeanstalk.com.conf
+Then, add the following content to the file:
+
+server {
+    server_name myplayground.us-east-2.elasticbeanstalk.com;
+
+    location / {
+        proxy_pass https://127.0.0.1:4000;
+    }
+}
+Install Let’s Encrypt by cloning the github repository into /opt/letsencrypt and running the Let’s Encrypt installer:
+$ git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
+$ /opt/letsencrypt/letsencrypt-auto --debug
+Restart nginx
+$ killall nginx
+$ /usr/sbin/nginx -c /etc/nginx/nginx.conf
+In the above example the server address is: myplayground.us-east-2.elasticbeanstalk.com And there is an internal process that works listen to port 4000.
+
+Certification Renewal
+$ /opt/letsencrypt/letsencrypt-auto certonly --debug --webroot -w /var/www/playground -d myplayground.us-east-2.elasticbeanstalk.com -d www.myplayground.us-east-2.elasticbeanstalk.com --config /etc/letsencrypt/config.ini --agree-tos
+Or
+
+$ ./certbot-auto renew -v --debug
+
